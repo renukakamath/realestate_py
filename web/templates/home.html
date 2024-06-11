@@ -1,0 +1,27 @@
+{% include 'public_header.html' %}
+
+<div class="main-div">
+    <div class="heading">
+        <h1>Welcome Home</h1>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+
+<style>
+    .main-div{
+        background:url('/static/assets/images/home.jpg');
+        display: flex;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        height: 100vh;
+    }
+    .heading{
+        background: rgba(0, 0, 0, 0.411);
+        padding: 2rem 4rem;
+    }
+    
+</style>

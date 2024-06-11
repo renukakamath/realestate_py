@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:background="#fff"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:background="#0098FE"
+        android:layout_height="150dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:layout_margin="50dp"
+            android:text="Login Here" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="40dp"
+
+            app:srcCompat="@drawable/ic_baseline_person_24" />
+
+
+    </TableRow>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+
+        android:background="@drawable/wave1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Welcome........"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        />
+
+    <EditText
+        android:id="@+id/etuname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:width="300dp"
+        android:drawableLeft="@drawable/pr"
+        android:drawablePadding="10dp"
+        android:background="@drawable/customtext"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:hint="User Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:width="300dp"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
+        android:background="@drawable/customtext"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/black"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/loginbtn"
+        android:text="Let Me In"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="517dp" />
+
+    <TextView
+        android:id="@+id/etreg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dont Haavn't Account Register Now..."
+        android:textAlignment="center"
+        android:layout_marginTop="80dp"
+        android:textColor="#0098FE"
+        android:textSize="15dp" />
+    <View
+        android:layout_width="match_parent"
+        android:background="@drawable/invertwave"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

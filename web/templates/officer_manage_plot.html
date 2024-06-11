@@ -1,0 +1,65 @@
+{% include 'officer_header.html' %}
+
+<div class="main-div">
+
+
+
+
+<center>
+    <div class="heading">
+    <form action="" method="post" enctype="multipart/form-data">
+    <h2>Upload posts</h2>
+    <table class="tablle" style="width: 600px;">
+       
+        <tr>
+            <th>Plot</th>
+            <td><input type="file" name="img" class="form-control"></td>    
+        </tr>
+        <tr>
+            <th>Place</th>
+            <td><input type="text" name="place" class="form-control" required value="{% if data['upost'] %}{{data['upost'][0]['place']}}{% endif %}" ></td>
+        </tr>
+        <tr>
+            <th>District</th>
+            <td><input type="text" name="dist" class="form-control" required value="{% if data['upost'] %}{{data['upost'][0]['district']}}{% endif %}" ></td>
+        </tr>
+        </tr>
+        <tr>
+            <th>State</th>
+            <td><input type="text" name="state" class="form-control" required value="{% if data['upost'] %}{{data['upost'][0]['state']}}{% endif %}" ></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2"><input type="submit" {% if data['upost'] %} name="edit" value="Update" {% else %} name="add" value="Post" {% endif %} class="btn btn-success"></td>
+        </tr>
+    </table>
+</div>
+</div>
+
+    <h2 style="margin-top: 30px;">View Posts</h2>
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>post</th>
+            <th>place</th>
+            <th>District</th>
+            <th>State</th>
+        </tr>
+        {% for i in data['viewpost'] %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td><img src="/{{i['plot']}}" width="250px" height="250px" alt=""></td>
+            <td>{{i['place']}}</td>
+            <td>{{i['district']}}</td>
+            <td>{{i['state']}}</td>
+            <td><a href="?action=update&postid={{i['plot_id']}}" class="btn btn-warning">Update</a></td>
+            <td><a href="?action=delete&postid={{i['plot_id']}}" class="btn btn-danger">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+</center>
+
+
+
+
+{% include 'footer.html' %}

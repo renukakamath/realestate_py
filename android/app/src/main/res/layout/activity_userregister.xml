@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:background="#EFEDED"
+    android:layout_height="match_parent"
+    tools:context=".Userregister">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0098FE"
+        >
+
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:inputType="textPersonName"
+            android:text="User Registration" />
+
+
+
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/wave1" >
+
+    </View>
+
+
+
+
+
+    <EditText
+        android:id="@+id/etfname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/customtext"
+        android:inputType="textPersonName"
+        android:hint="First Name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"/>
+
+
+    <EditText
+        android:id="@+id/etlname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/customtext"
+        android:inputType="textPersonName"
+        android:hint="Last Name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+       />
+
+    <EditText
+        android:id="@+id/etphone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/customtext"
+        android:inputType="textPersonName"
+        android:hint="Phone"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/customtext"
+        android:inputType="textPersonName"
+        android:hint="Email Address"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+
+
+
+
+    <EditText
+        android:id="@+id/etplace"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/customtext"
+        android:inputType="textPersonName"
+        android:hint="Place"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+
+
+    <EditText
+        android:id="@+id/etuname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/customtext"
+        android:inputType="textPersonName"
+        android:hint="User Name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/customtext"
+        android:inputType="textPersonName"
+        android:hint="Password"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/btsignup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="50dp"
+    android:layout_marginLeft="50dp"
+    android:text="Signup"
+    android:textColor="@color/black"
+
+    android:background="@drawable/loginbtn"/>
+
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+{% include 'admin_header.html' %}
+
+<div class="main-div" style="height: 300px;"></div>
+
+<center>
+   
+            <h3 style="margin-top: 10px;">View Plots</h3>
+    
+            <table class="table"  style="width: 900px;">
+                <tr>
+                    <th>#</th>
+                    <th>Plot</th>
+                 
+                    <th>Place<th>
+                    <th>District<th>
+                    <th>State<th>
+                     
+                </tr>
+                {% for row in data['plot'] %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td><img src="/{{row['plot']}}" alt="" style="width: 150px;height: 150px;"></td>
+             
+                    <td>{{row['place']}}</td>
+                    <td></td>
+                    <td>{{row['district']}}</td>
+                    <td></td>
+                    <td>{{row['state']}}</td>
+                    <td></td>
+                    <!-- <td><a href="?action=update&id={{row['officer_id']}}" class="btn btn-warning btn-sm">Update</a></td>
+                    <td><a href="?action=delete&id={{row['officer_id']}}" class="btn btn-danger btn-sm">Delete</a></td> -->
+                </tr>
+                {% endfor %}
+            </table>
+    
+  
+        </center>
+    </form>
+    
+    
+    
+    
+    {% include 'footer.html' %}

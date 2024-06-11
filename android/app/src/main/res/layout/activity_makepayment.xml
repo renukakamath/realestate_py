@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#E3DADA"
+    tools:context=".Makepayment">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"
+        android:text=" payment*" />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:background="@drawable/customtext"
+        android:textColor="@color/black"
+        android:textColorHint="#000"
+        android:hint="Amount"
+        android:text="500"
+        android:paddingLeft="10dp"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <EditText
+        android:id="@+id/chn"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:background="@drawable/customtext"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="Card holder name."
+        android:paddingLeft="20dp"
+
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/cno"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:background="@drawable/customtext"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="card no."
+        android:paddingLeft="20dp"
+
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/cvv"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/customtext"
+        android:ems="10"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="CVV*"
+        android:paddingLeft="20dp"
+
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/expdate"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/customtext"
+        android:ems="10"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="Expiry date"
+        android:paddingLeft="20dp"
+
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/paybtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#B0DF44"
+        android:text="Confirm"
+
+        android:textColor="#000"
+        android:textStyle="bold" />
+</LinearLayout>

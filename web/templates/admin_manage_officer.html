@@ -1,0 +1,94 @@
+{% include 'admin_header.html' %}
+
+<div class="main-div">
+
+
+
+<form method="post">
+    <center>
+        <div class="heading">
+        <h1>Manage Officers</h1>
+
+        <table class="table tbl-new" style="width: 600px;">
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" required name="fname" placeholder="First Name" class="form-control" value="{% if data['up'] %}{{data['up'][0]['fname']}}{% endif %}"></td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td><input type="text" required name="lname" placeholder="Last Name" class="form-control" value="{% if data['up'] %}{{data['up'][0]['lname']}}{% endif %}"></td>
+            </tr>
+            <tr>
+                <th>Place</th>
+                <td><input type="text" required name="place" placeholder="Place" class="form-control" value="{% if data['up'] %}{{data['up'][0]['place']}}{% endif %}"></td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td><input type="text" required pattern="[0-9]{10}" name="phone" placeholder="Phone" class="form-control" value="{% if data['up'] %}{{data['up'][0]['phone']}}{% endif %}"></td>
+            </tr> 
+            <tr>
+                <th>Email</th>
+                <td><input type="email" required name="email" placeholder="Email Address" class="form-control" value="{% if data['up'] %}{{data['up'][0]['email']}}{% endif %}"></td>
+            </tr>
+            {% if data['up'] %}
+            
+            {% else %}
+            <tr>
+                <th>Username</th>
+                <td><input type="text" required name="uname" placeholder="Username" class="form-control" ></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="text" required name="passw" placeholder="passw" class="form-control" ></td>
+            </tr>
+            {% endif %}
+
+
+            <tr>
+                <td align="center" colspan="2"><input type="submit" class="btn btn-success btn-sm" {% if data['up'] %} name="update" value="Update Changes" {% else %} name="add" value="Register" {% endif %}></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<!-- <div class="top-sec-view"></div> -->
+    <center>
+<div class="div-view">
+        <h3 style="margin-top: 10px;">Registered officers</h3>
+
+        <table class="table"  style="width: 900px;">
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Place<th>
+                <th>Phone<th>
+                <th>Email<th>
+                 
+            </tr>
+            {% for row in data['dview'] %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{row['fname']}}</td>
+                <td>{{row['lname']}}</td>
+                <td>{{row['place']}}</td>
+                <td></td>
+                <td>{{row['phone']}}</td>
+                <td></td>
+                <td>{{row['email']}}</td>
+                <td></td>
+                <td><a href="?action=update&id={{row['officer_id']}}" class="btn btn-warning btn-sm">Update</a></td>
+                <td><a href="?action=delete&id={{row['officer_id']}}" class="btn btn-danger btn-sm">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+    </div>
+    </center>
+</form>
+
+
+
+
+{% include 'footer.html' %}

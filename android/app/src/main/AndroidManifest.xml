@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:requestLegacyExternalStorage="true"
+        android:preserveLegacyExternalStorage="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Realestate"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Viewregistrationrequeststatus"
+            android:exported="false" />
+        <activity
+            android:name=".Addservice"
+            android:exported="false" />
+        <activity
+            android:name=".ViewForwordedfiles"
+            android:exported="false" />
+        <activity
+            android:name=".Viewmyplotrequests"
+            android:exported="false" />
+        <activity
+            android:name=".Makepayment"
+            android:exported="false" />
+        <activity
+            android:name=".Sendcomplaint"
+            android:exported="false" />
+        <activity
+            android:name=".Viewrequeststatus"
+            android:exported="false" />
+        <activity
+            android:name=".Viewothersplots"
+            android:exported="false" />
+        <activity
+            android:name=".Viewmyplot"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="true" />
+        <activity
+            android:name=".Userregister"
+            android:exported="true" />
+        <activity
+            android:name=".Userhome"
+            android:exported="true" />
+        <activity
+            android:name=".Ipsettings"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

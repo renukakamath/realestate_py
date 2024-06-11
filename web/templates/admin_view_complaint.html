@@ -1,0 +1,78 @@
+{% include 'admin_header.html' %}
+
+{% if data['id'] %}
+
+
+<div class="main-div" >
+
+
+
+    <form method="post">
+        <center>
+            <div class="heading" >
+            <h1>Complaint Reply</h1>
+    
+            <table class="table tbl-new" style="width: 600px;">
+                <tr>
+                    <th>Enquiry</th>
+                    <td><input type="text"  name="eq" readonly placeholder="First Name" class="form-control" value="{{data['complaint']}}"></td>
+                    <td><input type="hidden"  name="eqid" readonly placeholder="First Name" class="form-control" value="{{data['id']}}"></td>
+                </tr>
+                <tr>
+                    <th>Reply</th>
+                    <td><input type="text" required name="reply" placeholder="Last Name" class="form-control" value="{% if data['up'] %}{{data['up'][0]['dlname']}}{% endif %}"></td>
+                </tr>
+               
+    
+                <tr>
+                    <td align="center" colspan="2"><input type="submit" class="btn btn-success btn-sm" {% if data['up'] %} name="update" value="Update Changes" {% else %} name="add" value="Register" {% endif %}></td>
+                </tr>
+            </table>
+    
+        </div>
+    </div>
+
+
+
+{% else %}
+
+<div class="top-sec"></div>
+
+<center>
+    <div class="div-view">
+            <h3 style="margin-top: 30px;padding: 10px;">Complaints</h3>
+    
+            <table class="table"  style="width: 900px;">
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>complaint<th>
+                    <th>Reply<th>
+                    <th>Date<th>
+                     
+                </tr>
+                {% for row in data['view'] %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{row['fname']}}</td>
+                    <td>{{row['lname']}}</td>
+                    <td>{{row['comlpaint']}}</td>
+                    <td></td>
+                    <td>{{row['reply']}}</td>
+                    <td></td>
+                    <td>{{row['date']}}</td>
+                    <td></td>
+                    {% if row['reply']=='pending' %}
+                    <td><a href="?id={{row['complaint_id']}}&eq={{row['complaint']}}" class="btn btn-info btn-sm">Send Reply</a></td>
+                    <!-- <td><a href="?action=delete&id={{row['doctor_id']}}" class="btn btn-danger btn-sm">Danger</a></td> -->
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+    
+    
+        </div>
+        </center>
+{% endif %}
+{% include 'footer.html' %}

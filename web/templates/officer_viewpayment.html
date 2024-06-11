@@ -1,0 +1,44 @@
+{% include 'officer_header.html' %}
+
+<div class="top-sec"></div>
+
+<center>
+    <div class="div-view">
+            <h3 style="margin-top: 10px;">View payment</h3>
+    
+            <table class="table"  style="width: 800px;">
+                <tr>
+                    <th>#</th>
+                    <th>Customer Name</th>
+                    <th>Plot</th>
+                    <th>Place<th>
+              
+                    <th>Amount</th>
+                    <th>Date</th>
+                     
+                </tr>
+                {% for row in data['req'] %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{row['fname']}}{{row['lname']}}</td>
+                    <td><img src="/{{row['plot']}}" alt="" style="width: 150px;height: 150px;"></td>
+                    <td>{{row['place']}}</td>'
+               
+                    <td>{{row['amount']}}</td>
+                    <td>{{row['date']}}</td>
+
+                    
+                </tr>
+                {% endfor %}
+            </table>
+    
+    
+        </div>
+        </center>
+    </form>
+    
+    
+    
+    
+    {% include 'footer.html' %}
+

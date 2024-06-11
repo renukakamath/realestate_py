@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Userhome">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_marginBottom="80dp"
+        android:layout_width="match_parent"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="welcome User" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/myplot"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/homebutton"
+        android:layout_height="wrap_content"
+        android:text="View My Plots" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/otherplots"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/homebutton"
+        android:layout_height="wrap_content"
+        android:text="View Others Plot" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reqstatus"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/homebutton"
+        android:layout_height="wrap_content"
+        android:text="View Plot Request Status" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/myreq"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/homebutton"
+        android:layout_height="wrap_content"
+        android:text="View My Plot Request " />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendcomplaint"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/homebutton"
+        android:layout_height="wrap_content"
+        android:text="Send Complaint" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnrreq"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/homebutton"
+        android:layout_height="wrap_content"
+        android:text="Registration Request status" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logout"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/homebutton"
+        android:layout_height="wrap_content"
+        android:text="Logout" />
+
+</LinearLayout>

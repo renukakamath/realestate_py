@@ -1,0 +1,53 @@
+{% include 'officer_header.html' %}
+
+<div class="top-sec"></div>
+
+<center>
+    <div class="div-view">
+            <h3 style="margin-top: 10px;">View Requests</h3>
+    
+            <table class="table"  style="width: 800px;">
+                <tr>
+                    <th>#</th>
+                    <th>Requester name</th>
+                    <th>Plot</th>
+                    <th>Place<th>
+                    <th>District<th>
+                    <th>State<th>
+                    <th>Request Date</th>
+                    <th>Request Status</th>
+                     
+                </tr>
+                {% for row in data['req'] %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{row['fname']}}{{row['lname']}}</td>
+                    <td><img src="/{{row['plot']}}" alt="" style="width: 150px;height: 150px;"></td>
+                    <td>{{row['place']}}</td>'
+                    <td>{{row['district']}}</td>
+                    <td>{{row['state']}}</td>
+                    <td>{{row['date']}}</td>
+                    <td>{{row['status']}}</td>
+
+                    {% if row['status']=='pending' %}
+                
+                    <td><a href="?action=accept&id={{row['plot_register_id']}}" class="btn btn-warning btn-sm">Accept</a></td>
+                    <td><a href="?action=reject&id={{row['plot_register_id']}}" class="btn btn-danger btn-sm">Reject</a></td>
+                     {% elif row['status']!='reject' %}
+                    <td><a href="uploadcertifficate?id={{row['plot_register_id']}}" class="btn btn-danger btn-sm">Upload Certificate</a></td>
+                    
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+    
+    
+        </div>
+        </center>
+    </form>
+    
+    
+    
+    
+    {% include 'footer.html' %}
+
